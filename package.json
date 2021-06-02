@@ -1,0 +1,19 @@
+{
+  "name": "@mmxiaohx/hxutils",
+  "version": "0.0.1",
+  "description": "common js tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dota-web/utils.git"
+  },
+  "author": "mmxiaohx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dota-web/utils/issues"
+  },
+  "homepage": "https://github.com/dota-web/utils#readme"
+}
