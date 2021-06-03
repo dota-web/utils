@@ -1,0 +1,34 @@
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  mode: 'production',
+  entry: {
+    index: './utils/index.ts'
+  },
+  output: {
+    filename: '[name].lib.js',
+    clean: true,
+    path: path.resolve(__dirname, '../lib'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(tsx|ts)?$/,
+        use: [
+          {
+            loader: 'babel-loader?cacheDirectory=true',
+            options: {
+              presets: ['@babel/preset-env']
+            },
+          },
+          'ts-loader' 
+        ],
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+}
